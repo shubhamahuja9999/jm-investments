@@ -24,14 +24,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Email not configured' }, { status: 500 })
     }
 
-    // Use provided Mailtrap Sandbox credentials directly (per your request)
+    // Use environment variables (keeps secrets out of the repo)
     const transporter = nodemailer.createTransport({
-      host: 'sandbox.smtp.mailtrap.io',
-      port: 2525,
-      auth: {
-        user: 'b1d2d6d70ab98f',
-        pass: '381cd49559ebca',
-      },
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465,
+      auth: { user: smtpUser, pass: smtpPass },
     })
 
     // Verify connection/config first for clearer errors
@@ -42,7 +40,7 @@ export async function POST(req: NextRequest) {
     }
 
     await transporter.sendMail({
-      from: `JM Investments <no-reply@jminvestments.in>`,
+      from: `JM Investments <${smtpUser}>`,
       to: adminEmail,
       replyTo: email,
       subject: 'New Consultation Request',

@@ -274,9 +274,9 @@ const JMInvestmentsWebsite = () => {
           <div className="flex items-center justify-between">
             <div className="flex flex-col items-center leading-none">
               <div className="flex items-center gap-6">
-                <Image src="/logo.jpg" alt="JM Investments" width={230} height={64} className="h-16 w-auto object-contain" />
+                <Image src="/logo.png" alt="JM Investments" width={230} height={64} className="h-16 w-auto object-contain" />
                 <div className="h-14 w-px bg-[#0F1D45]/30" />
-                <Image src="/angel.jpeg" alt="Angel One" width={210} height={52} className="h-14 w-auto object-contain" />
+                <Image src="/angel.png" alt="Angel One" width={210} height={52} className="h-14 w-auto object-contain" />
               </div>
               <span className="mt-1 text-[11px] md:text-xs font-semibold tracking-wide uppercase text-[#0F1D45] text-center">Associate Partner</span>
             </div>

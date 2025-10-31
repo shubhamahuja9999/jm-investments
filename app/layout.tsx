@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: 'JM Investments - Your Trusted Financial Partner',
   description: 'Comprehensive financial solutions including mutual funds, insurance, FDs, and unlisted shares. Build wealth with expert guidance and trusted partnerships.',
   icons: {
-    icon: '/logo.jpg',
-    shortcut: '/logo.jpg',
-    apple: '/logo.jpg',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
 }
 
